@@ -93,7 +93,7 @@ describe('combinations', () => {
       };
 
       it('has the right starting value', () => {
-        expect(render().find(DummyInput).props().value).to.eq('');
+        expect(render().find(DummyInput).props().value).to.eq(null);
       });
 
       it('has no errors initially', () => {
