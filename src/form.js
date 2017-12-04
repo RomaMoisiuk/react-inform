@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 
 import getValue from './getValue';
 
-function undefinedToNull(value) {
-  if (value === undefined) return null;
+function undefinedToEmpty(value) {
+  if (value === undefined) return '';
   return value;
 }
 
@@ -147,7 +147,7 @@ export default function form({
       return {
         onChange: e => this.handleChange(name, e),
         onBlur: () => this.touch([name]),
-        value: undefinedToNull(values[name]),
+        value: undefinedToEmpty(values[name]),
         checked: typeof values[name] === 'boolean' ? values[name] : undefined,
       };
     }
